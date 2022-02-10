@@ -4,7 +4,6 @@ const reader = require('xlsx')
 
 //Read Excel file content and return into Json data
 function ReadExcelFile(fileName){
-    // Reading our test file
     const file = reader.readFile(fileName);
     let data = [];
     const jsonData = reader.utils.sheet_to_json(file.Sheets['Sheet1']);
