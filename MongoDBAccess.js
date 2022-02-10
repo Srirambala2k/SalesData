@@ -6,10 +6,12 @@ const database = client.db('Inventory');
 const sales = database.collection('sales');
 const salesRows = database.collection('sales_rows');
 
+//Save salesData into single document
 async function SaveSalesData(salesData){
     await sales.insertOne(salesData);    
 }
 
+//Save salesData iteam into seperate document
 async function SaveSalesDataRow(salesData){
     var salesData = salesData['SalesData']
     for (const row of salesData) {

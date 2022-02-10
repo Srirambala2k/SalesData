@@ -2,6 +2,7 @@
 
 const reader = require('xlsx')
 
+//Read Excel file content and return into Json data
 function ReadExcelFile(fileName){
     // Reading our test file
     const file = reader.readFile(fileName);
